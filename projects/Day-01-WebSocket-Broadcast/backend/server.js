@@ -10,6 +10,12 @@ const wss = new WebSocket.Server({
     server
 });
 
+wss.on("connection", (socket) => {
+
+    console.log("A new client connected!");
+
+});
+
 app.get("/", (req, res) => {
     res.send("Day 1 - Architect Journey");
 });
